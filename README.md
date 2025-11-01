@@ -1,0 +1,85 @@
+# AI NFT Project
+
+This project leverages AI models to generate unique artwork and simulates the NFT minting process. It combines a Variational Autoencoder (VAE) with a Diffusion model for image generation, and includes a Streamlit-based NFT simulator for testing the minting pipeline without real blockchain interactions.
+
+## Features
+
+- **AI Image Generation**: Train and use VAE + Diffusion models to create novel images from datasets.
+- **NFT Minting Simulation**: A Streamlit app that simulates uploading art to IPFS, creating metadata, and "minting" NFTs.
+- **Modular Code**: Separate scripts for training and simulation, with Jupyter notebooks for experimentation.
+
+## Project Structure
+
+- `train_model.py`: Main script for training the VAE and Diffusion models.
+- `nft_simulator.py`: Streamlit app for simulating NFT minting.
+- `ai_nft_project.ipynb`: Jupyter notebook version of the training process.
+- `hashcode_model.ipynb`: Additional notebook for model experimentation.
+- `datasets/`: Directory for storing training datasets (e.g., image folders).
+- `TODO.md`: Project roadmap and tasks.
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/rajarshisomvanshi/AI-NFT-Project.git
+   cd AI-NFT-Project
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install torch torchvision tqdm streamlit
+   ```
+
+   - For GPU support, ensure PyTorch is installed with CUDA if available.
+
+3. Prepare datasets:
+   - Place image datasets in the `datasets/` folder (e.g., subfolders for different classes).
+   - Example: Download Indian personality images or similar datasets.
+
+## Usage
+
+### Training the Model
+
+1. Update paths in `train_model.py` if needed (default: `./datasets/`).
+2. Run the training script:
+   ```bash
+   python train_model.py
+   ```
+   - This will train the models for 15 epochs and save checkpoints.
+
+3. Alternatively, use the Jupyter notebook `ai_nft_project.ipynb` for interactive training.
+
+### Running the NFT Simulator
+
+1. Launch the Streamlit app:
+   ```bash
+   streamlit run nft_simulator.py
+   ```
+2. Open the provided URL in your browser.
+3. Upload an image, fill in NFT details, and simulate the minting process.
+
+### Generating Images
+
+- After training, the script generates sample images and saves them as `final_generated_sample.png`.
+- Integrate generated images into the simulator for full pipeline testing.
+
+## Requirements
+
+- Python 3.8+
+- PyTorch
+- Torchvision
+- Tqdm
+- Streamlit
+
+## Contributing
+
+Feel free to fork and contribute! Open issues for bugs or feature requests.
+
+## License
+
+This project is open-source. Use at your own risk.
+
+## Acknowledgments
+
+- Inspired by diffusion models and NFT ecosystems.
+- Datasets: Ensure you have rights to use any images for training.
