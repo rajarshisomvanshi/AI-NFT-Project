@@ -113,6 +113,12 @@ dmypy.json
 *.jpg
 *.jpeg
 
+# Uncomment to ignore specific images if needed, but for now allow these
+# WhatsApp Image 2025-11-05 at 22.45.30_271f59fb.jpg
+# WhatsApp Image 2025-11-05 at 22.45.30_5976b4ed.jpg
+# WhatsApp Image 2025-11-05 at 22.45.30_c4a0f74e.jpg
+# WhatsApp Image 2025-11-05 at 22.45.31_5c35bad9.jpg
+
 # Datasets (uncomment if you want to ignore datasets)
 # datasets/
 
